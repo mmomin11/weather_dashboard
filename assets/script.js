@@ -24,8 +24,38 @@ $("#searchBtn").on("click", function() {
 	$("#searchTerm").val("");  
 
 // Query URL call variable.
+var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
 
 // use ajax to get the information needed from the api to display on the screen. 
+$.ajax({
+    url: queryUrl,
+    method: "GET"
+  })
+  .then(function (response){
+
+    console.log(response)
+
+    console.log(response.name)
+    console.log(response.weather[0].icon)
+
+    let tempF = (response.main.temp - 273.15) * 1.80 + 32;
+    console.log(Math.floor(tempF))
+
+    console.log(response.main.humidity)
+
+    console.log(response.wind.speed)
+
+    getCurrentConditions(response);
+    getCurrentForecast(response);
+    makeList();
+
+    })
+  });
+
+  function makeList() {
+    let listItem = $("<li>").addClass("list-group-item").text(city);
+    $(".list").append(listItem);
+  }
 
 // function for current conditions
 
