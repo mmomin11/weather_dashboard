@@ -5,6 +5,14 @@ const apiKey = "&appid=6bc6560db648e64c5a619a98493d462e";
 
 let date = new Date();
 
+$("#searchTerm").keypress(function(event) { 
+	
+	if (event.keyCode === 13) { 
+		event.preventDefault();
+		$("#searchBtn").click(); 
+	} 
+});
+
 // get value from users input
 
 // clear input box initially
