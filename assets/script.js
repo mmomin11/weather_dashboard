@@ -14,8 +14,14 @@ $("#searchTerm").keypress(function(event) {
 });
 
 // get value from users input
+$("#searchBtn").on("click", function() {
 
-// clear input box initially
+	$('#forecastH5').addClass('show');
+  
+	city = $("#searchTerm").val();
+	
+	// clear input box intiially
+	$("#searchTerm").val("");  
 
 // Query URL call variable.
 
