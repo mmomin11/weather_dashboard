@@ -1,6 +1,9 @@
 // create variable to store input value from user
-
+let city = $("#searchTerm").val();
 // store API key as global variable
+const apiKey = "&appid=6bc6560db648e64c5a619a98493d462e";
+
+let date = new Date();
 
 // get value from users input
 
