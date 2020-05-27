@@ -12,4 +12,4 @@ The weather dashboard will allow user to look at the current and 5-day forecast 
 ## Functionality
 The app has the ability to display current and future weather conditions. 
 
-[Dashboard Link](
+[Dashboard Link](https://mmomin11.github.io/weather_dashboard/)
