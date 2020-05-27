@@ -53,7 +53,7 @@ $.ajax({
   });
 
   function makeList() {
-    let listItem = $("<li>").addClass("list-group-item").text(city);
+    let listItem = $("<li>").addClass("btn-group-vertical list-group-item").text(city);
     $(".list").append(listItem);
   }
 
